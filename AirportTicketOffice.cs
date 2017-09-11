@@ -37,10 +37,10 @@ namespace ControlIndependentWork //пространство имен
         {
             get { return listJourneyTickets; } //получить коллекцияю авиабилетов
         }
-
+        
         static AirportTicketOffice() //статический конструктор
         {           
-            airoportTicketOfficeName = new NameAirport("MSQ", "Минск"); //присваивание названия кассы аэропорта         
+            airoportTicketOfficeName = new NameAirport("MSQ", "Minsk"); //присваивание названия кассы аэропорта         
             listOfDirections = new Dictionary<int, DirectionName>(); //инициализация пустой коллекции направлений                   
             listOfTariffs = new Dictionary<int, Tariff>(); //инициализация пустоой коллекции тарифов
             listOfPassengers = new Dictionary<int, Passenger>(); //инициализация пустой коллекции пассажиров         

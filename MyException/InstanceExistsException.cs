@@ -11,7 +11,7 @@ namespace ControlIndependentWork.MyException //пространство имен
             get //аксессор получения сообщения 
             {
                 //возвращаем сообщение ошибки
-                return "Экземпляр уже существует в списке.";
+                return "An instance already exists in the list.";
             }
         }
     }

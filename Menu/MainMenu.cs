@@ -5,20 +5,19 @@
     {
         public MainMenu() //конструктор
         {
-            leftTitle = 33; //установка позиции от левого края для названия меню
             topTitle = 9; //установка позиции от верхнего края для названия меню
-            left = 15; //установка позиции от левого края для пунктов меню
             top = 12; //установка начальной позиции от верхнего края для пунктов меню
-            menuHeading = "Главное Меню"; //название меню
-            MenuItems.Add("           Изменить список напрвлений            "); //пункт меню
-            MenuItems.Add("           Изменить список пассажиров            "); //пункт меню
-            MenuItems.Add("            Изменить список тарифов              "); //пункт меню
-            MenuItems.Add("       Зарегистрировать билет на пассажира       "); //пункт меню
-            MenuItems.Add("Рассчитать стоимость купленных билетов пассажиром"); //пункт меню
-            MenuItems.Add("   Рассчитать стоимость всех проданных билетов   "); //пункт меню
-            MenuItems.Add("           Увеличить стоимость перелета          "); //пункт меню
-            MenuItems.Add("             Добавить тестовые данные            "); //пункт меню
-            MenuItems.Add("                     Выход                       "); //пункт меню
+            menuHeading = "Main Menu"; //название меню
+            MenuItems.Add("           Change list of directions           "); //пункт меню
+            MenuItems.Add("           Change list of passengers           "); //пункт меню
+            MenuItems.Add("            Change list of tariffs             "); //пункт меню
+            MenuItems.Add("       Register a ticket for a passenger       "); //пункт меню
+            MenuItems.Add("    Calculate the cost of passenger tickets    "); //пункт меню
+            MenuItems.Add("    Calculate the cost of all tickets sold     "); //пункт меню
+            MenuItems.Add("        Increase the cost of the flight        "); //пункт меню
+            MenuItems.Add("                 Add test data                 "); //пункт меню
+            MenuItems.Add("                     Exit                      "); //пункт меню
+            calculate();
         }
     }
 }

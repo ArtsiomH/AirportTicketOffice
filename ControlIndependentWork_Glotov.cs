@@ -111,7 +111,7 @@ namespace ControlIndependentWork //пространство имен
                                                         case 1: //если позиция равна единицы
                                                             //создание объекта сценария добавления новго пассажира с процентной скидкой
                                                             newPassenger = new AddPassengerScript(new PassengerWithPercentDiscount());
-                                                            
+                                                            newPassenger.StartScript(); //запуск сценария
                                                             break; //выход
                                                         case 2: //если позиция равна двойке
                                                             //создание объекта сценария добавления новго пассажира с фиксированной скидкой
@@ -213,7 +213,7 @@ namespace ControlIndependentWork //пространство имен
 
                         case 4: //если позиция равна четверке
                             //создание объекта сценария добавления билета
-                            AddAirTicketScript ticket = new AddAirTicketScript("Билет зарегистрирован");
+                            AddAirTicketScript ticket = new AddAirTicketScript("The air ticket is registered");
                             if (ticket.ListIsEmpty) break; //если список пуст выход
                             //подписка на событие нажатия клавиши
                             positionEvent.Position += ticket.HandlerPosition;
@@ -252,7 +252,7 @@ namespace ControlIndependentWork //пространство имен
 
                         case 7: //если позиция равна семи
                             //создание объекта сценария изменения 
-                            ChangeInTicketPriceScript ticketPrice = new ChangeInTicketPriceScript("Выберите билет");
+                            ChangeInTicketPriceScript ticketPrice = new ChangeInTicketPriceScript("Choose a ticket");
                             if (ticketPrice.ListIsEmpty) break; //если список пуст выход
                             //подписка на событие нажатия клавиши
                             positionEvent.Position += ticketPrice.HandlerPosition;

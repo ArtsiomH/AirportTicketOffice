@@ -11,7 +11,7 @@ namespace ControlIndependentWork.MyException //пространство имен
             get //аксессор получения сообщения
             {
                 //возвращаем сообщение ошибки
-                return "Неверный формат для личного номера.";
+                return "Invalid format for a personal number.";
             }
         }
     }

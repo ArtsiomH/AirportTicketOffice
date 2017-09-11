@@ -21,6 +21,12 @@ namespace ControlIndependentWork.Menu //пространство имен
             Position = 1; //начальное значение позиции
         }
 
+        protected void calculate()
+        {
+            leftTitle = (Console.BufferWidth - menuHeading.Length) / 2;
+            left = (Console.BufferWidth - MenuItems[0].Length) / 2;
+        }
+
         //метод для обработки нажатия клавиши
         public void HandlerPosition(object sender, PositionEventArgs args)
         {

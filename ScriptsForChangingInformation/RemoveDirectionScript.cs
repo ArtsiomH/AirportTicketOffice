@@ -10,8 +10,8 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
     {
         public RemoveDirectionScript() //конструктор по умолчанию
         {
-            title = "Выберите направление"; //присваивание полю название сценария
-            result = string.Format("Направление удалено"); //присваивание полю сообщение результата
+            title = "Choose direction"; //присваивание полю название сценария
+            result = string.Format("Direction deleted"); //присваивание полю сообщение результата
             objects = new List<IToShortString>(); //инициализация пустого списка
             //перебор списка направлений            
             foreach (KeyValuePair<int, DirectionName> direction in AirportTicketOffice.ListOfDirections)

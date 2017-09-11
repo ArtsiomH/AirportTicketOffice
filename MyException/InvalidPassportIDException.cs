@@ -11,7 +11,7 @@ namespace ControlIndependentWork.MyException //пространство имен
             get //аксессор получения сообщения
             {
                 //возвращаем сообщение ошибки
-                return "неверно введен номер паспорта.";
+                return "Incorrect passport number entered.";
             }
         }
     }

@@ -10,9 +10,9 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
 
         public AddDirectionScript() //конструктор
         {
-            title = "Ввод данных об направлении"; //присваивание полю название сценария
-            text.Add("Введите полное название направления"); //добавлении поля текста
-            text.Add("Введите короткое название направления"); //добавлении поля текста
+            title = "Entering direction data"; //присваивание полю название сценария
+            text.Add("Enter a full name for the direction"); //добавлении поля текста
+            text.Add("Enter a short name for the direction"); //добавлении поля текста
             calculation(); //метод для расчета позиций текста и ввода данных 
         }
 
@@ -55,7 +55,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 catch (WrongNameOfShortDirectionException e) 
                 {
                     //вывод сообщения на консоль
-                    errorMessage(e.Message, "Пример формата для короткого наименования: MNQ");                  
+                    errorMessage(e.Message, "Example format for a short name: MNQ");                  
                 }
                 catch (ArgumentException e) //если уже существует экземпляр
                 {

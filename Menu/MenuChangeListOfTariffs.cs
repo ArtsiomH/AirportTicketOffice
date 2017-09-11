@@ -5,14 +5,13 @@
     {
         public MenuChangeListOfTariffs() //конструктор
         {
-            leftTitle = 28; //установка позиции от левого края для названия меню
             topTitle = 9; //установка позиции от верхнего края для названия меню
-            left = 26; //установка позиции от левого края для пунктов меню
             top = 12; //установка начальной позиции от верхнего края для пунктов меню
-            menuHeading = "Изменить Список Тарифов"; //название меню
-            MenuItems.Add("       Добавить тариф     "); //пункт меню
-            MenuItems.Add("       Удалить тариф      "); //пункт меню
-            MenuItems.Add(" Вернуться в главное меню "); //пункт меню
+            menuHeading = "Change List Of Tariffs"; //название меню
+            MenuItems.Add("  Add tariff           "); //пункт меню
+            MenuItems.Add("  Delete tariff        "); //пункт меню
+            MenuItems.Add("  Return to main menu  "); //пункт меню
+            calculate();
         }
     }
 }

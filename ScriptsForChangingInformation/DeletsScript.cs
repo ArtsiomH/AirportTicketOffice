@@ -22,7 +22,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 {
                     Console.Clear(); //очистка консоли
                     Console.SetCursorPosition(34, 15); //установка позиции курсора
-                    Console.WriteLine("Список пуст."); //вывод сообщения на консоль
+                    Console.WriteLine("The list is empty."); //вывод сообщения на консоль
                     Console.ReadKey(); //ожидание нажатия клавиши пользователем
                     return true; //список пуст
                 }

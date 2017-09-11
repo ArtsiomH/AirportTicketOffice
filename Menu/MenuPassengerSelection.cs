@@ -5,13 +5,12 @@
     {
         public MenuPassengerSelection() //конструктор
         {
-            leftTitle = 25; //установка позиции от левого края для названия меню
             topTitle = 9; //установка позиции от верхнего края для названия меню
-            left = 28; //установка позиции от левого края для пунктов меню
             top = 12; //установка начальной позиции от верхнего края для пунктов меню
-            menuHeading = "Выберите тип скидки пассажира"; //название меню
-            MenuItems.Add("  Процентная скидка   "); //пункт меню
-            MenuItems.Add(" Фиксированная скидка "); //пункт меню
+            menuHeading = "Select type of passenger discount"; //название меню
+            MenuItems.Add("   Percent discount   "); //пункт меню
+            MenuItems.Add("    Fixed discount    "); //пункт меню
+            calculate();
         }
     }
 }

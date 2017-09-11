@@ -44,7 +44,7 @@ namespace ControlIndependentWork.TestInformation //пространство им
             }
             Console.Clear(); //очистка консоли
             Console.SetCursorPosition(27, 15); //установка позиции курсора
-            Console.WriteLine("Тестовые данные добавлены."); //сообщение о выполнении
+            Console.WriteLine("Test data has been added."); //сообщение о выполнении
             Console.ReadKey(); //ожидание нажатия клавиши пользователем     
         }
     }

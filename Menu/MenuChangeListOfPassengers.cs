@@ -5,14 +5,13 @@
     {
         public MenuChangeListOfPassengers() //конструктор
         {
-            leftTitle = 27; //установка позиции от левого края для названия меню
             topTitle = 9; //установка позиции от верхнего края для названия меню
-            left = 27; //установка позиции от левого края для пунктов меню
             top = 12; //установка начальной позиции от верхнего края для пунктов меню
-            menuHeading = "Изменить Список Пассажиров"; //название меню
-            MenuItems.Add("    Добавить пассажира    "); //пункт меню
-            MenuItems.Add("    Удалить пассажира     "); //пункт меню
-            MenuItems.Add(" Вернуться в главное меню "); //пункт меню
+            menuHeading = "Change List Of Passengers"; //название меню
+            MenuItems.Add("  Add passenger        "); //пункт меню
+            MenuItems.Add("  Delete passenger     "); //пункт меню
+            MenuItems.Add("  Return to main menu  "); //пункт меню
+            calculate();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace ControlIndependentWork.CostCalculation //пространство им
                 {
                     Console.Clear(); //очистка консоли
                     Console.SetCursorPosition(28, 15); //установка позиции курсора
-                    Console.WriteLine("Список пассажиров пуст."); //вывод сообщения на консоль
+                    Console.WriteLine("The passenger list is empty."); //вывод сообщения на консоль
                     Console.ReadKey(); //ожидание нажатия клавиши пользователем
                     return true; //список пуст
                 }
@@ -42,14 +42,14 @@ namespace ControlIndependentWork.CostCalculation //пространство им
             if (print) //если можно выводить информацию на консоль о стоимости
             {
                 //создается форматированная строка сообщения
-                string str = string.Format("Стоимость купленных пассажиром билетов составила: {0} у.е.", sum);
+                string str = string.Format("The cost of tickets bought by the passenger was: {0} cu", sum);
                 //установка позиции курсора
                 Console.SetCursorPosition((Console.BufferWidth - str.Length) / 2, 15);
                 Console.WriteLine(str); //вывод строки на консоль
                 Console.ReadKey(); //ожинание нажатия клавиши пользователем
                 return false; //возвращет false для выход из цикла
             }
-            FormForList.Show("Выберите пассажира", passengers, position); //вывод на экран информации о пассажире        
+            FormForList.Show("Select a passenger", passengers, position); //вывод на экран информации о пассажире        
             return true; //возвращает true для повторения операции просмотра нового пассажира
         }
 

@@ -72,7 +72,7 @@ namespace ControlIndependentWork.Passengers //пространство имен
         public string ToShortString()
         {
             //возвращает форматированную строку
-            return string.Format("Номер паспорта: {0}  Фамилия: {1}  Имя: {2}", PassportID, Surname, Name);
+            return string.Format("Passport ID: {0}  Surname: {1}  Name: {2}", PassportID, Surname, Name);
         }
 
         //переопределенный метод ToString

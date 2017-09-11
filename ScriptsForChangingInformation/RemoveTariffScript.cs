@@ -9,8 +9,8 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
     {     
         public RemoveTariffScript() //конструктор по умолчанию
         {
-            title = "Выберите тариф"; //присваивание полю название сценария
-            result = string.Format("Тариф удален"); //присваивание полю сообщение результата
+            title = "Select tariff"; //присваивание полю название сценария
+            result = string.Format("Tariff was deleted"); //присваивание полю сообщение результата
             objects = new List<IToShortString>(); //инициализация пустого списка
             //перебор списка тарифов              
             foreach (KeyValuePair<int, Tariff> tariff in AirportTicketOffice.ListOfTariffs)

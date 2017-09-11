@@ -24,7 +24,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 {
                     Console.Clear(); //очистка консоли
                     Console.SetCursorPosition(28, 15); //установка позиции курсора
-                    Console.WriteLine("Список направлений пуст."); //вывод сообщения на консоль
+                    Console.WriteLine("The list of directions is empty."); //вывод сообщения на консоль
                     Console.ReadKey(); //ожидание нажатия клавиши пользователем
                     return true; //список пуст
                 }
@@ -38,11 +38,11 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
             directions = AirportTicketOffice.ListOfDirections.Values.ToList();
             //если направления есть, то добавляем наше направление
             if (directions.Count != 0) directions.Add(AirportTicketOffice.AiroportTicketOfficeName);
-            title = "Ввод данных об тарифе"; //присваивание полю название сценария
-            text.Add("Город вылета"); //добавлении поля текста
-            text.Add("Город прилета"); //добавлении поля текста
-            text.Add("Введите дату отправления"); //добавлении поля текста
-            text.Add("Введите стоимость полета"); //добавлении поля текста
+            title = "Entering tariff data"; //присваивание полю название сценария
+            text.Add("City of departure"); //добавлении поля текста
+            text.Add("City of arrival"); //добавлении поля текста
+            text.Add("Enter the departure date"); //добавлении поля текста
+            text.Add("Enter the cost of the flight"); //добавлении поля текста
             calculation(); //метод для расчета позиций текста и ввода данных            
         }
 
@@ -52,13 +52,13 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
             if (type == 1) //первый тип для выбора направления откуда 
             {
                 //вывод на консоль описание объекта направления
-                FormForList.Show("Выберите пунк отправления", directions, position);
+                FormForList.Show("Choose the point of departure", directions, position);
                 return true; //для продолжения общего цикла
             }
             if (type == 2) //второй тип для выбора направления куда
             {
                 //вывод на консоль описание объекта направления
-                FormForList.Show("Выберите пункт прибытия", directions, position);
+                FormForList.Show("Choose the point of arrival", directions, position);
                 return true; //для продолжения общего цикла
             }           
             while (true) //бесконечный цикл
@@ -96,7 +96,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 }
                 catch (FormatException) //если непаравильный формат ввода
                 {
-                    errorMessage("Неверно ввод данных."); //сообщение ошибки
+                    errorMessage("Invalid input."); //сообщение ошибки
                 }                         
             }
         }

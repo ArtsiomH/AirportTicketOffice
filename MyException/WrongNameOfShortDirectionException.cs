@@ -11,7 +11,7 @@ namespace ControlIndependentWork.MyException //пространство имен
             get //аксессор получения сообщения
             {
                 //возвращаем сообщение ошибки
-                return "Запись должна состоять максимум из трех символов в международном формате.";
+                return "Record must consist of maximum of three characters in international format.";
             }
         }
     }

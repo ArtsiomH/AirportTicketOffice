@@ -10,8 +10,8 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
     {
         public RemovePassengerScript() //конструктор по умолчанию
         {
-            title = "Выберите пасажира"; //присваивание полю название сценария
-            result = string.Format("Пассажир удален"); //присваивание полю сообщение результата
+            title = "Select a passenger"; //присваивание полю название сценария
+            result = string.Format("Passenger was deleted"); //присваивание полю сообщение результата
             objects = new List<IToShortString>(); //инициализация пустого списка
             //перебор списка пассажиров           
             foreach (KeyValuePair<int, Passenger> passenger in AirportTicketOffice.ListOfPassengers)

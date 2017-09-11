@@ -11,7 +11,7 @@ namespace ControlIndependentWork.CostCalculation //пространство им
             //расчет суммы всех билетов
             decimal sum = AirportTicketOffice.ListJourneyTickets.Sum(x => x.DiscountedPrice);
             //создание форматированной строки вывода на консоль           
-            string str = string.Format("Стоимость всех билетов с учетом скидок: {0} у.е.", sum);          
+            string str = string.Format("The cost of all tickets including discounts: {0} cu", sum);          
             Console.SetCursorPosition((Console.BufferWidth - str.Length) / 2, 15); //установка положения курсора
             Console.WriteLine(str); //вывод строки на консоль
             Console.ReadKey(); //ожидание нажатия клавиши пользователем

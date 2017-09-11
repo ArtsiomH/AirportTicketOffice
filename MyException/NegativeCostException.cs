@@ -11,7 +11,7 @@ namespace ControlIndependentWork.MyException //пространство имен
             get //аксессор получения сообщения
             {
                 //возвращаем сообщение ошибки
-                return "Не верна указана стоимость.";
+                return "Invalid is the cost.";
             }
         }
     }
