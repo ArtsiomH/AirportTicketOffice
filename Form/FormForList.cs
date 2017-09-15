@@ -22,7 +22,7 @@ namespace ControlIndependentWork.Form //пространство имен
             Console.SetCursorPosition(39, 16); //установка позиции курсора 
             Console.Write((char)0x25bc); //печать символа из Unicode
             Console.SetCursorPosition(leftInfo, 18); //установка позиции курсора 
-            Console.WriteLine("{0} из {1}", position, list.Count); //печат информации о списке
+            Console.WriteLine("{0} of {1}", position, list.Count); //печат информации о списке
         }
     }
 }

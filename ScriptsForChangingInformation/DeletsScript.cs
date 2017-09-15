@@ -21,7 +21,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 if (objects.Count == 0) //если список объектов пуст
                 {
                     Console.Clear(); //очистка консоли
-                    Console.SetCursorPosition(34, 15); //установка позиции курсора
+                    Console.SetCursorPosition(30, 15); //установка позиции курсора
                     Console.WriteLine("The list is empty."); //вывод сообщения на консоль
                     Console.ReadKey(); //ожидание нажатия клавиши пользователем
                     return true; //список пуст

@@ -20,13 +20,13 @@ namespace ControlIndependentWork.TestInformation //пространство им
         public RandomPassenger() //конструктор
         {
             //считывание с файла список фамилий 
-            listOfSurname.AddRange(File.ReadAllLines("surnames.txt"));
+            listOfSurname.AddRange(File.ReadAllLines("surnames.txt", Encoding.UTF7));
             //считывание с файла список муских имен
-            listOfMaleNames.AddRange(File.ReadAllLines("male names.txt"));
+            listOfMaleNames.AddRange(File.ReadAllLines("male names.txt", Encoding.UTF7));
             //считывание с файла список женских имен
-            listOfFemaleNames.AddRange(File.ReadAllLines("female names.txt"));
+            listOfFemaleNames.AddRange(File.ReadAllLines("female names.txt", Encoding.UTF7));
             //считывание с файла список регионов
-            listOfRegions.AddRange(File.ReadAllLines("region.txt"));         
+            listOfRegions.AddRange(File.ReadAllLines("region.txt", Encoding.UTF7));         
         }
 
         //метод для получения рандомной даты рождения
@@ -40,22 +40,22 @@ namespace ControlIndependentWork.TestInformation //пространство им
 
         private string randomSurname() //метод для получения рандомной фамилии
         {
-            return listOfSurname[rand.Next(0, 100)]; //возвращает рандомную фамилию
+            return listOfSurname[rand.Next(0, listOfSurname.Count)]; //возвращает рандомную фамилию
         }
 
         private string randomName() //метод для получения рандомного имени
         {
             if (rand.Next(0, 2) == 0) //если 0
             {
-                return listOfMaleNames[rand.Next(0, 50)]; //возвращает мужское имя
+                return listOfMaleNames[rand.Next(0, listOfMaleNames.Count)]; //возвращает мужское имя
             }
-            passenger.Surname = passenger.Surname + 'а'; //склоняем фамилию
-            return listOfFemaleNames[rand.Next(0, 50)]; //возвращает женское имя      
+            passenger.Surname = passenger.Surname + 'a'; //склоняем фамилию
+            return listOfFemaleNames[rand.Next(0, listOfFemaleNames.Count)]; //возвращает женское имя      
         }
 
         private string randomPassportID() //метод получения рандомного номера паспорта
         {
-            string region = listOfRegions[rand.Next(0, 7)]; //рандомный регион
+            string region = listOfRegions[rand.Next(0, listOfRegions.Count)]; //рандомный регион
             //возвращаем рандомный номер паспорта
             return region + rand.Next(1000000, 9999999).ToString(); 
         }

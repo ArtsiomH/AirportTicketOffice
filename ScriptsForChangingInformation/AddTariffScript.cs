@@ -23,7 +23,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 if (directions.Count == 0) //если списков пуст
                 {
                     Console.Clear(); //очистка консоли
-                    Console.SetCursorPosition(28, 15); //установка позиции курсора
+                    Console.SetCursorPosition(23, 15); //установка позиции курсора
                     Console.WriteLine("The list of directions is empty."); //вывод сообщения на консоль
                     Console.ReadKey(); //ожидание нажатия клавиши пользователем
                     return true; //список пуст
@@ -68,7 +68,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                     Console.CursorVisible = true; //включение видимости курсора                    
                     openForm(); //открытие формы для заполнения данных тарифа
                     Console.SetCursorPosition(leftInput, topInput); //установка позиции курсора
-                    //выввод на консоль наименнование выбранного напрвления откуда
+                    //выввод на консоль наименнование выбранного направления откуда
                     Console.WriteLine(tariff.DepartureFrom.FullDirectionName);
                     Console.SetCursorPosition(leftInput, topInput + 2); //установка позиции курсора
                     //выввод на консоль наименнование выбранного напрвления куда

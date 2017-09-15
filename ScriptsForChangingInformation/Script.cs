@@ -80,5 +80,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
             Console.ReadKey(); //ожидание нажатия клавиши пользователем
             return false; //прерывает цикл
         }
+
+
     }
 }

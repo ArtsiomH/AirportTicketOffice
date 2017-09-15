@@ -229,7 +229,90 @@ namespace ControlIndependentWork //пространство имен
                             notReturn = true;  //выход из цикла
                             break; //выход
 
-                        case 5:
+                        case 5: //если позиция равна пяти
+                            MenuListsView menuList = new MenuListsView();
+
+                            positionEvent.Position += menuList.HandlerPosition;
+                            do
+                            {
+                                menuList.ShowMenu(); //отображение меню для направления                              
+                                keyInfo = Console.ReadKey(); //ожидание нажатия пользователем клавиши                                
+                                positionEvent.OnPosition(menuList, keyInfo.Key); //запуск события
+                                if (keyInfo.Key == ConsoleKey.Enter) //если пользователь нажал Enter
+                                {
+                                    switch (menuList.Position) //переход по позиции
+                                    {
+                                        case 1: //если позиция равна единицы
+                                            //создание объекта сценария просмотра списка пассажиров
+                                            ViewListDirectionsScript viewDirections = new ViewListDirectionsScript();
+                                            if (viewDirections.ListIsEmpty) break;
+                                            positionEvent.Position += viewDirections.HandlerPosition;
+                                            viewDirections.Start(); //запуск сценария просмотра пассажиров
+                                            do
+                                            {
+                                                keyInfo = Console.ReadKey(); //ожидание нажатия пользователем клавиши
+                                                positionEvent.OnPosition(viewDirections, keyInfo.Key); //запуск события
+                                                notReturn = viewDirections.Start(); //продолжение сценария
+                                            } while (notReturn); //если сценарий закончился выход
+                                            positionEvent.Position -= viewDirections.HandlerPosition;
+                                            notReturn = true; //для продолжения цикла
+                                            break; //выход
+                                        case 2: //если позиция равна двойке
+                                            //создание объекта сценария просмотра списка пассажиров
+                                            ViewListPassengersScript viewPassengers = new ViewListPassengersScript();
+                                            if (viewPassengers.ListIsEmpty) break;
+                                            positionEvent.Position += viewPassengers.HandlerPosition;
+                                            viewPassengers.Start(); //запуск сценария просмотра пассажиров
+                                            do
+                                            {
+                                                keyInfo = Console.ReadKey(); //ожидание нажатия пользователем клавиши
+                                                positionEvent.OnPosition(viewPassengers, keyInfo.Key); //запуск события
+                                                notReturn = viewPassengers.Start(); //продолжение сценария
+                                            } while (notReturn); //если сценарий закончился выход
+                                            positionEvent.Position -= viewPassengers.HandlerPosition;
+                                            notReturn = true; //для продолжения цикла
+                                            break; //выход
+                                        case 3:
+                                            //создание объекта сценария просмотра списка пассажиров
+                                            ViewListTariffsScript viewTariffs = new ViewListTariffsScript();
+                                            if (viewTariffs.ListIsEmpty) break;
+                                            positionEvent.Position += viewTariffs.HandlerPosition;
+                                            viewTariffs.Start(); //запуск сценария просмотра пассажиров
+                                            do
+                                            {
+                                                keyInfo = Console.ReadKey(); //ожидание нажатия пользователем клавиши
+                                                positionEvent.OnPosition(viewTariffs, keyInfo.Key); //запуск события
+                                                notReturn = viewTariffs.Start(); //продолжение сценария
+                                            } while (notReturn); //если сценарий закончился выход
+                                            positionEvent.Position -= viewTariffs.HandlerPosition;
+                                            notReturn = true; //для продолжения цикла
+                                            break; //выход
+                                        case 4:
+                                            //создание объекта сценария просмотра списка пассажиров
+                                            ViewListPassengerFlightScript viewPassengersFlight = new ViewListPassengerFlightScript();
+                                            if (viewPassengersFlight.ListTariffsIsEmpty) break;
+                                            positionEvent.Position += viewPassengersFlight.HandlerPosition;
+                                            viewPassengersFlight.Start(); //запуск сценария просмотра пассажиров
+                                            do
+                                            {
+                                                keyInfo = Console.ReadKey(); //ожидание нажатия пользователем клавиши
+                                                positionEvent.OnPosition(viewPassengersFlight, keyInfo.Key); //запуск события
+                                                notReturn = viewPassengersFlight.Start(); //продолжение сценария
+                                            } while (notReturn); //если сценарий закончился выход
+                                            positionEvent.Position -= viewPassengersFlight.HandlerPosition;
+                                            notReturn = true; //для продолжения цикла
+                                            break; //выход
+                                        case 5: //если позиция равна тройке
+                                            notReturn = false; //для прерывания цикла
+                                            //отписка от события нажатия клавиши
+                                            positionEvent.Position -= menuList.HandlerPosition;
+                                            break; //выход
+                                    }
+                                }
+                            } while (notReturn); //цикл
+                            break; //выход
+                            
+                        case 6: //если позиция равна шести
                             //создание объекта стоимость билетов для пассажира
                             CostPassengerTickets cost = new CostPassengerTickets();
                             if (cost.ListIsEmpty) break; //если список пуст выход
@@ -246,11 +329,11 @@ namespace ControlIndependentWork //пространство имен
                             notReturn = true; //продолжить цикл
                             break; //выход
 
-                        case 6: //если позиция равна шести
+                        case 7: //если позиция равна семи
                             TicketPrices.Cost(); //расчет стоимости всех билетов с учетом скидки
                             break; //выход
 
-                        case 7: //если позиция равна семи
+                        case 8: //если позиция равна восьми
                             //создание объекта сценария изменения 
                             ChangeInTicketPriceScript ticketPrice = new ChangeInTicketPriceScript("Choose a ticket");
                             if (ticketPrice.ListIsEmpty) break; //если список пуст выход
@@ -267,12 +350,12 @@ namespace ControlIndependentWork //пространство имен
                             notReturn = true; //продолжить цикл
                             break; //выход
 
-                        case 8: //если позиция равна восьми
+                        case 9: //если позиция равна девяти
                             //добавление тестовых данных
                             AddingTestInform.Add(20, 20, 100); //(20 пассажиров, 20 тарифов и 100 билетов) 
                             break; //выход                                                
 
-                        case 9: //если позиция ранв девяти
+                        case 10: //если позиция рана десяти
                             return; //выход
                     }                
                 }

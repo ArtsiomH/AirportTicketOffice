@@ -34,7 +34,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
 
         public AddAirTicketScript(string title) //параметричемкий конструктор
         {
-            this.title = title; //присваивание полю название сценария          
+            this.title = title; //присваивание полю название сценария
             text.Add("Code of the country"); //добавлении поля текста
             text.Add("Passport ID"); //добавлении поля текста
             text.Add("Personal number"); //добавлении поля текста
@@ -55,7 +55,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
             if (tariffs.Count == 0 || passengers.Count == 0)
             {
                 Console.Clear(); //очистка консоли
-                Console.SetCursorPosition(19, 15); //установка позиции курсора
+                Console.SetCursorPosition(17, 15); //установка позиции курсора
                 //вывод сообщения на консоль
                 Console.WriteLine("It is necessary to add tariffs or passengers");
                 Console.ReadKey(); //ожидание нажатия клавиши пользователем

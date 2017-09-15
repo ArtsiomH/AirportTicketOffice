@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions; //пространство имен содержит класс регулярных выражений
+﻿using System;
+using System.Text.RegularExpressions; //пространство имен содержит класс регулярных выражений
 using ControlIndependentWork.MyException; //пространство имен содержит классы ошибок
 using ControlIndependentWork.Form; //пространство имен содержит интерфейс IToShortString
 

@@ -22,7 +22,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
             if (airTickets.Count == 0) //если списк билетов пуст
             {
                 Console.Clear(); //очистка консоли
-                Console.SetCursorPosition(28, 15); //установка позиции курсора
+                Console.SetCursorPosition(23, 15); //установка позиции курсора
                 Console.WriteLine("The list of air tickets is empty."); //вывод сообщения на консоль
                 Console.ReadKey(); //ожидание нажатия клавиши пользователем
                 return true; //список пуст
@@ -48,7 +48,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation //простра�
                 //вывод на консоль данных об билете
                 printInfo(passenger, tariff, airTickets[position - 1]);
                 //присваивание строки информации о текущей позиции билета из списка
-                info = string.Format("{0} из {1}", position, airTickets.Count);
+                info = string.Format("{0} of {1}", position, airTickets.Count);
                 Console.SetCursorPosition((Console.BufferWidth - info.Length) / 2, 28); //установка позиции курсора
                 Console.WriteLine(info); //вывод на консоль строки информации
                 return true; //для продолжения общего цикла
