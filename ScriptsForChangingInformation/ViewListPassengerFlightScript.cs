@@ -36,7 +36,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation
                 if (passengers.Count == 0) //если список объектов пуст
                 {
                     Console.Clear(); //очистка консоли
-                    Console.SetCursorPosition(30, 15); //установка позиции курсора
+                    Console.SetCursorPosition(20, 15); //установка позиции курсора
                     Console.WriteLine("No registered passengers on the flight"); //вывод сообщения на консоль
                     Console.ReadKey(); //ожидание нажатия клавиши пользователем
                     return true; //список пуст
@@ -55,6 +55,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation
                 FormForList.Show("Select a tariff", tariffs, position);
                 return true;
             }
+            else if (type == 0) return false;
             return base.Start();
         }
 
@@ -95,6 +96,7 @@ namespace ControlIndependentWork.ScriptsForChangingInformation
                         }
                         if(ListPassengersIsEmpty)
                         {
+                            type = 0;
                             notReturn = false;
                             return;
                         }
